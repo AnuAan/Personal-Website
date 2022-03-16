@@ -9682,3 +9682,26 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+
+
+
+    
+
+    
+
+#error_message{
+  margin-bottom: 20px;
+background-color: violet;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  width: 300px;
+  color: black;
+ 
+}
+.wrapper{
+  background-color: white;
+}

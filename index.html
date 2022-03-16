@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<script src="form.js"></script>
+
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -521,34 +523,50 @@
           </div>
         </div>
 
-        <div class="row no-gutters block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form method="post" name="contactform" action="https://script.google.com/macros/s/AKfycbx5uNLtOtJWoQmT0Ucdw0A6utKVPe_EZLAriHISdkt9c0oBFPRJ0VO4JC2V59GZglRT/exec" class="bg-light p-4 p-md-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email" name="email" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" name="subject" required>
-              </div>
-              <div class="form-group">
-                <textarea  id="" cols="30" rows="7" class="form-control" placeholder="Message" name="message" required></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
+	</section>
+	<section class="container">
+			<div class="row">
+				<div class="col-md-6">
+			<img src="images/pic-1.JPG">
+				</div>
 
-          <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(images/pic-1.JPG);"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+				<div class="col-md-6" ><br>
+					<h2 class="text-primary">Contact me</h2>
+					
+					<form name="contact-form" class="">
+						<div>
+						  <label>Full Name</label>
+						  <input class="form-control" name="name" placeholder="First and Last Name" />
+						  <div class="text-danger fade">Name is required</div>
+						</div>
+				  
+						<div>
+						  <label>Email</label>
+						  <input class="form-control" name="email" placeholder="email@example.com"/>
+						  <div class="text-danger fade">Email is invalid</div>
+						</div>
+				  
+						<div>
+						  <label>Phone</label>
+						  <input class="form-control" name="phone"></input>
+						  <div class="text-danger fade">Phone is invalid</div>
+						</div>
+				  
+						<div>
+						  <label>Message</label>
+						  <textarea class="form-control" name="message"></textarea>
+						  <div class="text-danger fade">Message is required</div>
+						</div>
+				  
+						<hr />
+				  
+						<button type="submit" class="btn btn-warning btn-lg">SUBMIT</button>
+					  </form>
+					</div>
+			</div>
+	</section>
+
+    
 		
 
     <footer class="ftco-footer ftco-section">
@@ -628,20 +646,9 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
 
-  <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbx5uNLtOtJWoQmT0Ucdw0A6utKVPe_EZLAriHISdkt9c0oBFPRJ0VO4JC2V59GZglRT/exec'
-	const form = document.forms['contactform']
-  
-	form.addEventListener('submit', e => {
-	  e.preventDefault()
-	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		.then(response => console.log('Success!', response))
-		.catch(error => console.error('Error!', error.message))
-	})
-  </script>
+
     
   </body>
 </html>
